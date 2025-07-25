@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { GameProvider } from './context/GameContext';
+import Header from './components/Header';
 import TapScreen from './components/TapScreen';
 import ShopScreen from './components/ShopScreen';
 import ProfileScreen from './components/ProfileScreen';
@@ -7,7 +8,7 @@ import WithdrawScreen from './components/WithdrawScreen';
 import ReferralScreen from './components/ReferralScreen';
 import DailyRewardScreen from './components/DailyRewardScreen';
 import LeaderboardScreen from './components/LeaderboardScreen';
-import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [activeTab, setActiveTab] = useState('tap');
@@ -34,10 +35,7 @@ function App() {
           {renderScreen()}
         </main>
         
-        <footer className="mt-10 py-6 text-center text-gray-600">
-          <p>Created by Badhist Man 🇪🇹</p>
-          <p className="mt-2">Join <a href="https://t.me/Freetech_1" className="text-blue-500">@Freetech_1</a> for updates</p>
-        </footer>
+        <Footer />
       </div>
     </GameProvider>
   );
